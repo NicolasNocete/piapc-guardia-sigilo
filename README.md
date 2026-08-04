@@ -4,7 +4,7 @@ titulo: Laboratorio Guardia de Sigilo
 tipo: indice
 audiencia: estudiante
 acceso: publico
-version: 1
+version: 2
 ---
 
 # Laboratorio Guardia de Sigilo
@@ -13,7 +13,7 @@ Proyecto canónico de PIAPC 2026 para aplicar desarrollo agéntico e inteligenci
 
 ## Estado
 
-H0 implementado: escenario base, jugador, obstáculos, cuadrícula de dominio y validación automatizada. Los comportamientos del guardia se incorporan de manera incremental en los hitos siguientes.
+H0, H1 y H2 implementados: escenario base, repositorio preparado para agentes y navegación observable mediante BFS y A*. El seguimiento de rutas y la percepción se incorporan en H3.
 
 ## Ejecución
 
@@ -29,6 +29,13 @@ Validación completa:
 ```bash
 npm run validate
 ```
+
+En la escena:
+
+- WASD o flechas: mover al jugador.
+- Clic: elegir un destino para el guardia.
+- Espacio: comparar BFS y A*.
+- R: reiniciar el escenario.
 
 ## Propósito
 
@@ -52,6 +59,10 @@ El proyecto no busca producir un videojuego comercial. Es un entorno de experime
 - [Hitos](docs/hitos.md)
 - [Contrato para proyectos alternativos](docs/contrato-proyecto-alternativo.md)
 - [Decisiones técnicas](docs/decisiones-tecnicas.md)
+- [Auditoría H1](docs/auditoria-h1.md)
+- [Permisos recomendados](docs/permisos-recomendados.md)
+- [Registro de intervención](docs/plantillas/registro-intervencion.md)
+- [Evidencia de pruebas](docs/plantillas/evidencia-pruebas.md)
 
 ## Tecnología de referencia
 

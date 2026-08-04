@@ -37,7 +37,12 @@ export function isInside(
   map: Pick<GridMap, "width" | "height">,
   point: GridPoint,
 ): boolean {
-  return point.x >= 0 && point.y >= 0 && point.x < map.width && point.y < map.height;
+  return Number.isInteger(point.x)
+    && Number.isInteger(point.y)
+    && point.x >= 0
+    && point.y >= 0
+    && point.x < map.width
+    && point.y < map.height;
 }
 
 export function isWalkable(map: GridMap, point: GridPoint): boolean {

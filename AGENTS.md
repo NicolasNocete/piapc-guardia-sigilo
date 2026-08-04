@@ -3,8 +3,9 @@
 ## Antes de cambiar codigo
 
 1. Lea `specs/01-producto.md` y `docs/arquitectura.md`.
-2. Inspeccione los archivos relacionados antes de proponer cambios.
-3. Declare cualquier ambiguedad que afecte los criterios de aceptacion.
+2. Consulte `docs/permisos-recomendados.md` antes de ejecutar herramientas.
+3. Inspeccione los archivos relacionados antes de proponer cambios.
+4. Declare cualquier ambiguedad que afecte los criterios de aceptacion.
 
 ## Limites arquitectonicos
 

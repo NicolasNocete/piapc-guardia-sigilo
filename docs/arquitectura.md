@@ -4,7 +4,7 @@ titulo: Arquitectura del laboratorio Guardia de Sigilo
 tipo: referencia
 audiencia: estudiante
 acceso: publico
-version: 1
+version: 2
 ---
 
 # Arquitectura propuesta
@@ -67,9 +67,15 @@ guardia-sigilo/
 
 ### Navegación
 
-Entrada: grafo, inicio, objetivo, costos y heurística.
+La cuadrícula forma un grafo implícito de cuatro vecinos transitables. BFS utiliza una cola y sirve como referencia no informada. A* utiliza costo unitario y distancia Manhattan, admisible para este movimiento cardinal.
 
-Salida: `success`, `path`, `totalCost`, `expandedNodes`, `maximumFrontier` y error explícito.
+Entrada: mapa, inicio y objetivo.
+
+Salida: algoritmo, estado, `path`, `totalCost`, `expandedNodes`, `maximumFrontier` y secuencia `explored`. Los estados de fracaso distinguen inicio inválido, objetivo inválido y objetivo inaccesible.
+
+Un nodo se considera expandido al retirarlo de la frontera, incluido el objetivo. `maximumFrontier` registra la mayor cantidad de nodos pendientes en cualquier paso.
+
+Implementación: `src/domain/navigation/`. La selección para la demostración ocurre en `src/application/simulation/navigationDemo.ts` y Phaser sólo representa el resultado.
 
 ### Percepción
 

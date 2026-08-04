@@ -16,6 +16,7 @@ describe("grid map", () => {
     expect(isWalkable(LAB_MAP, { x: 0, y: 0 })).toBe(false);
     expect(isWalkable(LAB_MAP, { x: -1, y: 2 })).toBe(false);
     expect(isWalkable(LAB_MAP, { x: LAB_MAP.width, y: 2 })).toBe(false);
+    expect(isWalkable(LAB_MAP, { x: 1.5, y: 2 })).toBe(false);
   });
 
   it("converts between cells and world coordinates", () => {

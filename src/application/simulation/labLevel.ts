@@ -4,6 +4,7 @@ export const TILE_SIZE = 32;
 export const GRID_WIDTH = 30;
 export const GRID_HEIGHT = 20;
 export const PLAYER_START: GridPoint = { x: 2, y: 2 };
+export const GUARD_START: GridPoint = { x: 27, y: 17 };
 
 interface BlockedRectangle {
   readonly x: number;

@@ -50,6 +50,10 @@ export function isWalkable(map: GridMap, point: GridPoint): boolean {
 }
 
 export function cellCenter(point: GridPoint, tileSize: number): GridPoint {
+  assertValidTileSize(tileSize);
+  if (!Number.isInteger(point.x) || !Number.isInteger(point.y)) {
+    throw new Error("Grid coordinates must be integers.");
+  }
   return {
     x: point.x * tileSize + tileSize / 2,
     y: point.y * tileSize + tileSize / 2,
@@ -57,8 +61,18 @@ export function cellCenter(point: GridPoint, tileSize: number): GridPoint {
 }
 
 export function worldToCell(point: GridPoint, tileSize: number): GridPoint {
+  assertValidTileSize(tileSize);
+  if (!Number.isFinite(point.x) || !Number.isFinite(point.y)) {
+    throw new Error("World coordinates must be finite.");
+  }
   return {
     x: Math.floor(point.x / tileSize),
     y: Math.floor(point.y / tileSize),
   };
+}
+
+function assertValidTileSize(tileSize: number): void {
+  if (!Number.isFinite(tileSize) || tileSize <= 0) {
+    throw new Error("Tile size must be finite and positive.");
+  }
 }

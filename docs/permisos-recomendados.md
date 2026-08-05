@@ -36,3 +36,7 @@ La autonomía aumenta sólo cuando la tarea, el entorno y la validación están 
 ## Recuperación
 
 Trabajar sobre una rama o copia aislada, conservar cambios pequeños y revisar diferencias antes de integrar. No ocultar fallos, omitir pruebas ni revertir trabajo ajeno.
+
+## Instalación aprobada
+
+`npm ci` ejecuta scripts de instalación fijados por el archivo de bloqueo, incluido el binario de esbuild. Debe utilizarse sólo después de revisar cambios en `package.json` y `package-lock.json`. `--ignore-scripts` no sirve para la ejecución normal de Vite porque impediría preparar esbuild.

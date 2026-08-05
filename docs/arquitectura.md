@@ -4,7 +4,7 @@ titulo: Arquitectura del laboratorio Guardia de Sigilo
 tipo: referencia
 audiencia: estudiante
 acceso: publico
-version: 2
+version: 3
 ---
 
 # Arquitectura propuesta
@@ -79,9 +79,17 @@ Implementación: `src/domain/navigation/`. La selección para la demostración o
 
 ### Percepción
 
-Entrada: observador, objetivo, geometría y evento sonoro.
+Entrada visual: mapa, tamaño de celda, posición, dirección, objetivo, alcance y campo visual. La oclusión recorre todas las celdas atravesadas por la línea y adopta un criterio conservador al tocar esquinas.
 
-Salida: observaciones; no modifica directamente el estado de conducta.
+Entrada sonora: posición del oyente y evento con origen, radio, instante y duración.
+
+Salida: resultado y causa observable; no modifica directamente el estado de conducta. `src/domain/perception/memory.ts` conserva sólo observaciones finitas provistas por sensores validados y prioriza visión ante eventos simultáneos. `src/application/simulation/perceptionSimulation.ts` coordina sensores, vigencia del sonido y memoria; Phaser sólo adapta tiempo, entrada y representación.
+
+### Movimiento
+
+Entrada: posición, puntos de paso, índice siguiente y distancia máxima de avance.
+
+Salida: nueva posición, índice siguiente, finalización y dirección del último tramo consumido. `src/domain/navigation/pathFollower.ts` puede consumir varios puntos en una actualización y no depende de Phaser ni del tiempo de cuadro.
 
 ### Comportamiento
 

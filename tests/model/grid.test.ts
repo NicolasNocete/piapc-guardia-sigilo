@@ -30,4 +30,11 @@ describe("grid map", () => {
       "Blocked cell is outside the grid",
     );
   });
+
+  it("rejects invalid tile sizes and world coordinates", () => {
+    expect(() => cellCenter({ x: 0, y: 0 }, 0)).toThrow("Tile size");
+    expect(() => worldToCell({ x: Number.NaN, y: 0 }, TILE_SIZE)).toThrow(
+      "World coordinates",
+    );
+  });
 });

@@ -6,7 +6,7 @@ nivel: obligatorio
 audiencia: estudiante
 clases: [4, 5, 7, 8, 9, 10, 12, 13]
 modalidad: mixta
-resultados: [RA3, RA4, RA5, RA7, RA8, RA9, RA10, RA11]
+resultados: [RA3, RA4, RA5, RA6, RA7, RA8, RA9, RA10, RA11]
 prerrequisitos: []
 evaluable: true
 acceso: publico

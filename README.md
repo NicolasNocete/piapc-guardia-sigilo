@@ -4,7 +4,7 @@ titulo: Laboratorio Guardia de Sigilo
 tipo: indice
 audiencia: estudiante
 acceso: publico
-version: 2
+version: 3
 ---
 
 # Laboratorio Guardia de Sigilo
@@ -13,14 +13,14 @@ Proyecto canónico de PIAPC 2026 para aplicar desarrollo agéntico e inteligenci
 
 ## Estado
 
-H0, H1 y H2 implementados: escenario base, repositorio preparado para agentes y navegación observable mediante BFS y A*. El seguimiento de rutas y la percepción se incorporan en H3.
+H0 a H3 implementados: escenario base, repositorio preparado para agentes, navegación BFS/A* y percepción con memoria. La máquina de estados se incorpora en H4.
 
 ## Ejecución
 
 Requiere Node.js 22 o superior.
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
@@ -34,7 +34,8 @@ En la escena:
 
 - WASD o flechas: mover al jugador.
 - Clic: elegir un destino para el guardia.
-- Espacio: comparar BFS y A*.
+- Espacio: alternar BFS y A*.
+- Q: emitir un sonido desde el jugador.
 - R: reiniciar el escenario.
 
 ## Propósito
@@ -63,6 +64,9 @@ El proyecto no busca producir un videojuego comercial. Es un entorno de experime
 - [Permisos recomendados](docs/permisos-recomendados.md)
 - [Registro de intervención](docs/plantillas/registro-intervencion.md)
 - [Evidencia de pruebas](docs/plantillas/evidencia-pruebas.md)
+- [H3: percepción y movimiento](docs/h3-percepcion-movimiento.md)
+- [Intervención H3](docs/evidencias/h3-intervencion.md)
+- [Validación H3](docs/evidencias/h3-validacion.md)
 
 ## Tecnología de referencia
 

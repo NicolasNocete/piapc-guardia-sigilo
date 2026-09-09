@@ -59,6 +59,31 @@ version: 3
 - Registro de transiciones.
 - Pruebas de secuencias.
 
+### H4.1. Patrullar
+
+- Recorrer puntos de patrulla cíclicos mediante rutas válidas.
+- Registrar llegada y selección del siguiente punto.
+
+### H4.2. Investigar
+
+- Responder a un sonido o última posición conocida sin usar información no percibida.
+- Registrar origen, destino y resultado de navegación.
+
+### H4.3. Perseguir
+
+- Priorizar una percepción visual válida y actualizar memoria.
+- Replanificar sólo cuando cambia el objetivo de forma relevante o vence el intervalo definido.
+
+### H4.4. Buscar
+
+- Al perder visión, recorrer una búsqueda limitada alrededor de la última posición conocida.
+- Conservar memoria y registrar inicio, vencimiento o recuperación de percepción.
+
+### H4.5. Regresar
+
+- Tras agotar la búsqueda, volver a un punto de patrulla válido.
+- Recuperarse explícitamente ante un destino inaccesible y registrar la transición.
+
 ## H5. Comparación
 
 - Representación equivalente mediante árbol de comportamiento, utilidad y GOAP en diagramas o trazas.
